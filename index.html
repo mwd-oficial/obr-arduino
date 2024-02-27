@@ -1,33 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="celular.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>OBR - Arduino</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            background-color: #F4F5F6;
-            overflow: hidden;
-        }
-
-        iframe {
-            width: 99.5vw;
-            height: 99.5vh;
-        }
-    </style>
 </head>
+
 <body>
-    <iframe src="https://www.tinkercad.com/embed/gCJ17QSrpYG?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    <div id="background-image-div">
+        <img src="imagens/obr.png" alt="obr">
+    </div>
+    <img src="imagens/circuito.png" alt="circuito" id="circuito-ampliado" class="imagens-ampliadas">
+    <img src="imagens/codigo.png" alt="codigo" id="codigo-ampliado" class="imagens-ampliadas">
+    <img src="imagens/codigo.png" alt="codigo" id="codigo2-ampliado" class="imagens-ampliadas">
+    <div id="fundo"></div>
+    <div id="conteudo">
+        <header>
+            <img src="imagens/obr.png" alt="obr" id="obr-img" class="btns-img">
+        </header>
+        <div id="main-div">
+            <main id="main-scroll">
+                <h1>QUESTÃO 16</h1>
+                <p>Considere o circuito e o código mostrados abaixo e analise as afirmativas:</p>
+                <div class="imagens-div">
+                    <img src="imagens/circuito.png" alt="circuito" id="circuito-img" class="imagens-clicaveis btns-img">
+                    <img src="imagens/codigo.png" alt="codigo" id="codigo-img" class="imagens-clicaveis btns-img">
+                </div>
+                <ol type="I">
+                    <li>
+                        <span>
+                            <span class="box boxv btns-img"><span class="material-symbols-outlined">check</span></span>
+                            <span class="box boxf btns-img resultado"><span
+                                    class="material-symbols-outlined">close</span></span>
+                        </span>
+                        I. O estado inicial do LED azul que é mostrado no monitor serial é 1 (desligado)
+                    </li>
+                    <li>
+                        <span>
+                            <span class="box boxv btns-img resultado"><span
+                                    class="material-symbols-outlined">check</span></span>
+                            <span class="box boxf btns-img"><span class="material-symbols-outlined">close</span></span>
+                        </span>
+                        II. Quando um LED liga, o outro desliga
+                    </li>
+                    <li>
+                        <span>
+                            <span class="box boxv btns-img resultado"><span
+                                    class="material-symbols-outlined">check</span></span>
+                            <span class="box boxf btns-img"><span class="material-symbols-outlined">close</span></span>
+                        </span>
+                        III. O LED azul acende 4 vezes
+                    </li>
+                    <li>
+                        <span>
+                            <span class="box boxv btns-img"><span class="material-symbols-outlined">check</span></span>
+                            <span class="box boxf btns-img resultado"><span
+                                    class="material-symbols-outlined">close</span></span>
+                        </span>
+                        IV. O estado final do LED vermelho que aparecerá no monitor Serial é 1
+                    </li>
+                    <li>
+                        <span>
+                            <span class="box boxv btns-img resultado"><span
+                                    class="material-symbols-outlined">check</span></span>
+                            <span class="box boxf btns-img"><span class="material-symbols-outlined">close</span></span>
+                        </span>
+                        V. O Estado inicial do LED vermelho que é mostrado do Serial é zero (desligado)
+                    </li>
+                    <li>
+                        <span>
+                            <span class="box boxv btns-img"><span class="material-symbols-outlined">check</span></span>
+                            <span class="box boxf btns-img resultado"><span
+                                    class="material-symbols-outlined">close</span></span>
+                        </span>
+                        VI. O azul e o vermelho ficam ligados ao mesmo tempo
+                    </li>
+                    <li>
+                        <span>
+                            <span class="box boxv btns-img resultado"><span
+                                    class="material-symbols-outlined">check</span></span>
+                            <span class="box boxf btns-img"><span class="material-symbols-outlined">close</span></span>
+                        </span>
+                        VII. O estado final do led azul que aparecerá no monitor serial é um
+                    </li>
+                    <li>
+                        <span>
+                            <span class="box boxv btns-img"><span class="material-symbols-outlined">check</span></span>
+                            <span class="box boxf btns-img resultado"><span
+                                    class="material-symbols-outlined">close</span></span>
+                        </span>
+                        VIII. O estado final dos leds é igual a zero
+                    </li>
+                </ol>
+                <p>Assinale a alternativa que indica as afirmativas corretas:</p>
+                <ol type="a">
+                    <li><span class="letras btns-img">A</span> I, II, VI e V</li>
+                    <li><span class="letras btns-img">B</span> II, V, VI e VI</li>
+                    <li><span class="letras btns-img">C</span> III, IV, V e VIII</li>
+                    <li><span class="letras btns-img">D</span> II, III, V e VII</li>
+                    <li><span class="letras btns-img">E</span> I, III, VI e VIII</li>
+                </ol>
+                <p id="aviso">teste</p>
+                <button id="verificar-btn" class="desabilitado btns-img">Verificar Resposta</button>
+                <section id="explicacao">
+                    <h2>Teste o Projeto na Prática</h2>
+                    <iframe src="https://www.tinkercad.com/embed/gCJ17QSrpYG?editbtn=1" frameborder="0" marginwidth="0"
+                        marginheight="0" scrolling="no"></iframe>
+                    <h2>Explicação Detalhada</h2>
+                    <div class="imagens-div">
+                        <img src="imagens/codigo.png" alt="codigo" id="codigo2-img" class="imagens-clicaveis btns-img">
+                    </div>
+                    <p>Este código é escrito em uma linguagem chamada Arduino, que é uma linguagem de programação
+                        baseada em C/C++. É usada para programar placas Arduino, que são placas de microcontroladores
+                        usadas em projetos de eletrônica.</p>
+                    <p>Aqui está uma explicação detalhada do código:</p>
+                    <ol type="1">
+                        <li><code>#define azul 8</code> e <code>#define vermelho 13</code>: Estas são diretivas de
+                            pré-processador que definem
+                            'azul' como 8 e 'vermelho' como 13. Estes números representam os pinos aos quais os LEDs
+                            estão conectados na placa Arduino.</li>
+
+                        <li><code>void setup() { ... }</code>: Esta é a função de configuração do código, chamada uma
+                            vez quando a
+                            placa Arduino é ligada ou reiniciada. Ela é usada para inicializar variáveis, configuração
+                            de pinos, iniciar a utilização de bibliotecas, etc.</li>
+
+                        <li><code>pinMode(13, OUTPUT);</code> e <code>pinMode (8, OUTPUT);</code>: Estas linhas
+                            configuram os pinos 13 e 8 como
+                            saídas. Isto significa que estes pinos serão usados para enviar sinais para os LEDs.</li>
+
+                        <li><code>Serial.begin(9600);</code>: Esta linha está inicializando a comunicação serial do
+                            Arduino, com uma
+                            taxa de transferência de 9600 bits por segundo.
+                            Isso permite que o Arduino envie e receba dados de outros dispositivos, como um computador.
+                        </li>
+
+                        <li><code>Serial.println("Estado inicial led azul: " + String(digitalRead(8)));</code> e
+                            <code>Serial.println("Estado inicial led vermelho:" + String(digitalRead(13)));</code>:
+                            Estas linhas estão imprimindo os estados iniciais dos leds azul e vermelho, respectivamente,
+                            no monitor serial do Arduino. Os estados são obtidos lendo os valores dos pinos 8 e 13, que
+                            foram definidos como saída anteriormente.</li>
+
+                        <li><code>for (int i = 0; i &lt;= 7; i++) { ... }</code>: Esta é uma estrutura de repetição que
+                            será executada 8 vezes. Cada vez que a estrutura é executada, o valor do led vermelho e azul
+                            é alternado, usando as funções <code>digitalWrite(13, !digitalRead(13));</code> e
+                            <code>digitalWrite(8, !digitalRead(13));</code>. A função <code>delay(1000);</code> faz uma
+                            pausa de 1000 milissegundos (ou seja, 1 segundo) entre cada piscada.</li>
+
+                        <li><code>void loop() { ... }</code>: Esta é a função principal do código, que será executada
+                            repetidamente, uma vez que o setup tenha sido concluído. No entanto, neste código, a função
+                            loop está vazia, o que significa que não há nenhuma ação a ser executada repetidamente.</li>
+                    </ol>
+                </section>
+            </main>
+            <div id="logodiv">
+                <a href="https://mwd-oficial.github.io/sobre" target="_blank"><img src="imagens/logoMWDt.png" alt=""
+                        id="logo"></a>
+            </div>
+            <footer>
+                <p>Realizado por: Mateus Gonçalves, Nicolas Pádua, Luís Miguel, Victor hugo, Breno e João Pedro</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,40 @@
+::-webkit-scrollbar {
+    width: 0;
+}
+
+main {
+    width: 95vw;
+    padding: 30px 15px;
+}
+
+li,
+p {
+    font-size: 15px;
+}
+
+ol[type="I"] li {
+    flex-direction: column;
+    gap: 0px;
+    margin: 30px 0;
+}
+
+code {
+    font-size: 11px;
+}
+
+.imagens-ampliadas {
+    height: initial;
+    width: 90%;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+footer p {
+    font-size: 12px;
+}
